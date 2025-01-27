@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>catalog library</title>
+</head>
+
+<body>
+    <button id="back">Back</button>
+    <div class="main">
+        <button id="add">Add book</button>
+        <button id="check-out">Check out</button>
+        <button id="check-in">Check in</button>
+        <button id="list">List book</button>
+    </div>
+    <div class="mainAddBook">
+        <input type="number" id="ISBN" placeholder="ISBN" required autofocus>
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <button id="creatBook">Add</button>
+
+    </div>
+    <div class="check-out">
+        <input id="inpcheckout" type="number" autofocus placeholder="Enter ISBN to check out">
+        <button id="btncheckout">Check out</button>
+
+    </div>
+
+    <div class="check-in">
+        <input id="inpcheckin" type="number" autofocus placeholder="Enter ISBN to check in">
+        <button id="btncheckin">Check in</button>
+
+    </div>
+    <div class="mainListbook">
+        <table id="listBook">
+
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

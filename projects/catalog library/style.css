@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background:linear-gradient(#333,#101) ;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    
+
+}
+#back{
+    height: 30px;
+    color: hotpink;
+    border: none;
+    border-radius: 20px;
+    width: 50px;
+    position: absolute;
+    background-color: #6494ed;
+    cursor: pointer;
+    transition: 0.8s;
+    margin: 10px;
+    font-size: 17px;
+    display: none;
+}
+#back:hover{
+    background-color: #0059ff;
+    letter-spacing: 2px;
+}
+.main{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    
+}
+.main button{
+    width: 50%;
+    height: 14%;
+    background-color: aquamarine;
+    border-radius: 20px;
+    border: solid cornflowerblue 5px;
+    cursor: pointer;
+    font-size: 200%;
+    color: hotpink;
+    transition: 0.8s;
+}
+.main button:hover{
+    background-color: #00f0a0;
+    letter-spacing: 2px;
+    font-size: 220%; 
+}
+.mainAddBook{
+    
+    height: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.mainAddBook input{
+    width: 50%;
+    background-color: #6494ed;
+    height: 10%;
+    font-size: 200%;
+    outline: none;
+    border: hotpink solid 3px; 
+    border-radius: 20px;
+    padding: 5px;
+    color: #fff ;
+    
+}
+.mainAddBook input::placeholder{
+    color: #fff;
+    opacity: 0.6;
+}
+.mainAddBook button{
+    width: 34%;
+    height: 7%;
+    background-color: hotpink;
+    cursor: pointer;
+    border: #6494ed solid 5px;
+    border-radius: 15px;
+    font-size: 160%;
+    color: white;
+    transition: 0.8s;
+
+}
+.mainAddBook button:hover{
+    background-color: deeppink;
+    scale: 1.1;
+    letter-spacing: 3px;
+}
+.check-out{
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+.check-out input{
+    outline: none;
+    background-color: hotpink;
+    border: #6494ed solid 5px;
+    width: 50%;
+    height: 10%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 200%;
+    color: #fff;
+}
+.check-out input::placeholder{
+    color: #ffffffb7; 
+}
+.check-out button{
+    width: 34%;
+    height: 7%;
+    background-color: #6494ed;
+    cursor: pointer;
+    border: hotpink solid 5px;
+    border-radius: 15px;
+    font-size: 160%;
+    color: white;
+    transition: 0.8s;
+}
+.check-out button:hover{
+    background-color: #0059ff;
+    scale: 1.1;
+
+
+}
+.check-in{
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+.check-in input{
+    outline: none;
+    background-color: hotpink;
+    border: #6494ed solid 5px;
+    width: 50%;
+    height: 10%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 200%;
+    color: #fff;
+}
+.check-in input::placeholder{
+    color: #ffffffb7; 
+}
+.check-in button{
+    width: 34%;
+    height: 7%;
+    background-color: #6494ed;
+    cursor: pointer;
+    border: hotpink solid 5px;
+    border-radius: 15px;
+    font-size: 160%;
+    color: white;
+    transition: 0.8s;
+}
+.check-in button:hover{
+    background-color: #0059ff;
+    scale: 1.1;
+    letter-spacing: 2px;
+
+}
+.mainListbook{
+    width: 80%;
+    height: 95%;
+    background-color: #5781ff88;
+    border-radius: 20px;
+    margin: 10px 69px  ;
+    overflow: scroll;
+    display: none;
+
+
+}
+.mainListbook::-webkit-scrollbar{
+    opacity: 0;
+}
+
+.mainListbook::-webkit-scrollbar-corner{
+    opacity: 0;
+}
+.mainListbook::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 105, 180, 0.53);
+    border-radius: 30px;
+}
+ table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+    
+    
+}
+
+th{
+    color: white;
+    
+    border-radius: 20px;
+    height: 30px;
+    
+}
+td{
+    color:#ffffff9c; 
+    
+}
+#Available{
+    background-color: #00f0a0c6;
+    border-radius: 20px;
+}
+#Unavailable{
+    background-color: #f80000bf;
+    border-radius: 20px;
+}
+@media (max-width:500px) {
+    table{
+        font-size: 20px;
+    }
+    td{
+        font-size: 15px;
+    }
+}

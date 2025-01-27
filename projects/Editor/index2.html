@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <div class="img-box">
+                <img id="img">
+            </div>
+            <div class="upload">
+                <label for="upload">Upload</label>
+                <input type="file" id="upload">
+            </div>
+        </div>
+
+        <div class="filters">
+            <ul>
+                <li><label for="saturate">Saturate</label>
+                    <input type="range" min="0" max="200" id="saturate" value="100">
+                </li>
+                <li><label for="contrast">Contrast</label>
+                    <input type="range" min="0" max="200" id="contrast" value="100">
+                </li>
+                <li><label for="brightness">Brightness</label>
+                    <input type="range" min="0" max="200" id="brightness" value="100">
+                </li>
+                <li><label for="sepia">Sepia</label>
+                    <input type="range" min="0" max="200" id="sepia" value="0">
+                </li>
+                <li><label for="grayscale">Grayscale</label>
+                    <input type="range" min="0" max="1" id="grayscale" step="0.1" value="0">
+                </li>
+                <li><label for="blur">Blur</label>
+                    <input type="range" min="0" max="10" id="blur" step="0.1" value="0">
+                </li>
+                <li><label for="hue-rotate">Hue Rotate</label>
+                    <input type="range" min="0" max="350" id="hue-rotate" value="0">
+                </li>
+                <li>
+                    <a download="true" id="download">Download</a>
+                    <span>Reset</span>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+body{
+    background-color: #333;
+
+}
+.container{
+    background-color: #222;
+    width: 88vw;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+.img #img{
+    max-width: 45vw;
+    max-height: 60vh;
+
+
+}
+.upload input{
+    display: none;
+}
+.upload label{
+    color: #fff;
+    padding: 8px 20px;
+    border: 2px #fff dashed;
+    cursor: pointer;
+}
+.filters ul, .filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    direction: rtl;
+}
+.filters ul li  label{
+    color: #fff;
+}
+.filters ul li:last-child{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.filters ul li a, span{
+    color: #fff;
+    padding: 10px 20px; 
+    background-color: #060;
+}
+
+@media (max-width:650px) {
+    .container{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+</style>
+
+
+    <script >
+        let saturate = document.getElementById("saturate");
+let contrast = document.getElementById("contrast");
+let brightness = document.getElementById("brightness");
+let sepia = document.getElementById("sepia");
+let grayscale = document.getElementById("grayscale");
+let blur = document.getElementById("blur");
+let hueRotate = document.getElementById("hue-rotate");
+let upload = document.getElementById("upload");
+let download = document.getElementById("download");
+let img = document.getElementById("img");
+let reset = document.querySelector("span");
+let imgBox = document.querySelector(".img-box");
+window.onload = function () {
+  download.style.display = "none";
+  reset.style.display = "none";
+  imgBox.style.display = "none";
+};
+upload.onchange = function () {
+  download.style.display = "block";
+  reset.style.display = "block";
+  imgBox.style.display = "block";
+  let file = new FileReader();
+  file.readAsDataURL(upload.files[0]);
+  file.onload = function () {
+    img.src = file.result;
+
+  };
+};
+let filters = document.querySelectorAll("ul li input");
+
+filters.forEach((filter) => {
+    filter.addEventListener("input", function () {
+      img.style.filter = `
+        saturate(${saturate.value}%)
+        contrast(${contrast.value}%)
+        brightness(${brightness.value}%)
+        sepia(${sepia.value}%)
+        grayscale(${grayscale.value})
+        blur(${blur.value}px)
+        hue-rotate(${hueRotate.value}deg);`
+    });
+  });
+  
+    </script>
+</body>
+</html>

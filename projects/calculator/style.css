@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    height: 100vb;
+    background:linear-gradient(#001,#011);
+
+
+    flex-direction: column;
+}
+h2{
+    margin-bottom: 220px;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: gray;
+    margin: auto;
+}
+
+.main{
+    background:rgba(85, 85, 85, 0.801);
+    height: 70%;
+    width: 80%;
+    margin: auto;
+    border-radius: 19px;
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.inputs{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 5px;
+    transition: 0.5s;
+    
+    
+    
+    
+}
+input{
+    
+    background-color: rgba(255, 0, 0, 0.342) ;
+    color: rgba(255, 255, 255, 0.582);
+    width: 100%;
+    font-size: x-large;
+    outline: none;
+    height: 50px;
+    border-radius: 10px;
+
+}
+.numbers{   
+    height:75% ;
+    width: 76%;
+    
+}
+.num{
+    width: 30%;
+    height: 24%;
+    margin: 2px ;
+    background-color: rgba(0, 0, 255, 0.43);
+    color: rgba(255, 255, 255, 0.582);
+    font-size: xx-large;
+    cursor: pointer;
+    
+}
+.num:hover{
+    background-color: rgba(0, 0, 255, 0.861);
+}
+#hidden{
+    visibility: hidden;
+}
+.operations{
+   display: flex;
+   flex-direction: column;
+   width: 22%;
+   gap: 4px;
+   
+   
+}
+.operation{
+    height: 18%;
+    background-color: rgb(85, 104, 90);
+    color:rgba(255, 255, 255, 0.582) ;
+    font-size: xx-large;
+    cursor: pointer;
+
+}
+.operation:hover{
+    background-color: rgba(0, 128, 0, 0.599);
+}

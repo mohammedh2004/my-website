@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(244deg,#fff,#85c1FF);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.main{
+    background-color: #ff85c2;
+    width: 60%;
+    height: 80%;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    overflow-y: scroll;
+    
+    
+} 
+@media (max-width:500px) {
+    .main{
+        width: 80%;
+    }
+}
+.main::-webkit-scrollbar-corner{
+    opacity: 0;
+} 
+.main::-webkit-scrollbar{
+    opacity: 0;
+    width: 13px;
+    height: 0;
+
+}
+.main::-webkit-scrollbar-thumb{
+    background-color: #b7ffff85;
+    border-radius: 0 20px 20px 0;
+    
+}   
+.head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    
+
+}
+.head h2{
+    font-size: 30px;
+    color: #fff;
+}
+.main .head  img{
+
+    width: 59px;
+
+} 
+.inp{
+
+    
+    width: 95%;
+    background-color: #85c1FF;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+.inp input{
+    flex: 1;
+    background-color: #85c1FF;
+    outline: 0;
+    border: 0;
+    height: 45px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    
+}
+.inp input::placeholder{
+    color: #fff;
+    
+}
+.inp button{
+    
+    padding: 0 10px;
+    background-color: #b7ffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: #ff85c2;
+    transition: 0.8s;
+}
+.inp button:hover{
+    background-color: aqua;
+}
+ul{
+    list-style: none;
+    font-size: 28px;
+    color: #fff;
+    width: 85%;
+    
+
+
+}
+li{
+    background-color: #ffb9dc;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+}
+li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: -29px;
+    cursor: pointer;
+
+}
+li span{
+    content: "X";
+    position: absolute;
+    background-color: #85c1FF;
+    width: 25px;
+    text-align: center;
+    right: -29px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+li span:hover{
+    color: #ffb9dc;
+}
+.checked{
+    text-decoration: line-through;
+}
+.checked::before{
+    
+    background-image: url(images/checked.png);
+}

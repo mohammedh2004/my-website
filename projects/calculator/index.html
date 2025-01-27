@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <h2>calculator by mh</h2>
+    <div class="main">
+        <div class="inputs">
+
+            <input type="number" onclick="activeInput()"  id="inp1">
+            <input type="number" onclick="activeInput()" id="inp2">
+            
+        </div>
+        <div class="numbers">
+            <button class="num" onclick="takenum(this.title)" title="1" id="one">1</button>
+            <button class="num" onclick="takenum(this.title)" title="2" id="two">2</button>
+            <button class="num" onclick="takenum(this.title)" title="3" id="three">3</button>
+            <button class="num" onclick="takenum(this.title)" title="4" id="four">4</button>
+            <button class="num" onclick="takenum(this.title)" title="5" id="five">5</button>
+            <button class="num" onclick="takenum(this.title)" title="6" id="six">6</button>
+            <button class="num" onclick="takenum(this.title)" title="7" id="seven">7</button>
+            <button class="num" onclick="takenum(this.title)" title="8" id="eight">8</button>
+            <button class="num" onclick="takenum(this.title)" title="9" id="nine">9</button>
+            <button class="num" onclick="spaceNum()"   id="delete" >space</button>
+            <button class="num" onclick="takenum(this.title)" title="0"id="zero">0</button> 
+            <button class="num"   id="hidden" >0</button>
+            
+
+        </div>
+        <div class="operations">
+            <button class="operation" onclick="operationIs(this.id)" id="sum">+</button>
+            <button class="operation" onclick="operationIs(this.id)" id="sub">-</button>
+            <button class="operation" onclick="operationIs(this.id)" id="subd">/</button>
+            <button class="operation" onclick="operationIs(this.id)" id="mul">x</button>
+            <button class="operation" id="equal" onclick="showRuselt()">=</button>
+        </div>
+    </div> 
+</body>
+<script src="main.js"></script>
+</html>
