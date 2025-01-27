@@ -359,6 +359,7 @@ header .logo:hover,
     height: 80%;
     border-radius: 20px;
     position: relative;
+
 }
 .about .text h3 {
     font-size: 25px;
@@ -368,7 +369,7 @@ header .logo:hover,
 
 .about .text p{
     
-  font-size: clamp(13.3px, 2vw, 25px);
+  font-size: clamp(12px, 2vw, 25px);
     color: #fff;
   font-family: serif;
   height: 100%;
